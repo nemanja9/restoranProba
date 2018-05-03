@@ -6,7 +6,10 @@ import java.util.LinkedList;
 import artikal.Artikal;
 import restoran.gui.GlavniProzorLAZY;
 import restoran.gui.HranaProzor;
+import restoran.gui.KonobarovPrikaz;
+import restoran.gui.PicaProzor;
 import restoran.gui.PotvrdiPorudzbinuHraneDijalog;
+import restoran.gui.PotvrdiPorudzbinuPicaDijalog;
 import restoran.interfejs.Restoran;
 import restoran.interfejs.RestoranInterfejs;
 
@@ -33,8 +36,10 @@ public class GUIKontroler {
 		hp.setVisible(true);
 	}
 
-	public static void prikaziPiceProzor() {
-		// TODO Auto-generated method stub
+	public static void prikaziPicaProzor() {
+		PicaProzor pp = new PicaProzor();
+		pp.setLocationRelativeTo(gp);
+		pp.setVisible(true);
 		
 	}
 	private final static String newline = "\n";
@@ -55,7 +60,7 @@ public class GUIKontroler {
 		a.sastojci = izabraniSastojci;
 		restoran.poruciArtikal(a);
 		ispis(a);
-	
+		prikaziKonobarProzor(a);
 	
 	}
 	
@@ -64,4 +69,14 @@ public class GUIKontroler {
 			gp.textArea.append(a.naziv + "............." +a.cena + newline);
 		
 	}
+	public static void prikaziPotvrdiPorudzbinuPicaDijalog(Artikal a) {
+		PotvrdiPorudzbinuPicaDijalog dij = new PotvrdiPorudzbinuPicaDijalog(a);
+		dij.setLocationRelativeTo(gp);
+		dij.setVisible(true);
+	}
+	public static void prikaziKonobarProzor(Artikal a) {
+		KonobarovPrikaz kp = new KonobarovPrikaz();
+		kp.setVisible(true);
+	}
+	
 }

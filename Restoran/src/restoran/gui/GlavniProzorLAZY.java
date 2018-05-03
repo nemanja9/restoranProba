@@ -110,7 +110,7 @@ public class GlavniProzorLAZY extends JFrame {
 			button_1 = new JButton("Pice");
 			button_1.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					GUIKontroler.prikaziPiceProzor();
+					GUIKontroler.prikaziPicaProzor();
 				}
 			});
 			button_1.setBounds(130, 224, 247, 119);
