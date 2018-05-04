@@ -89,8 +89,6 @@ public class KonobarovPrikaz extends JFrame {
 			btnSto = new JButton("Sto 1");
 			btnSto.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-				
-				
 				}
 			});
 			btnSto.setBounds(12, 26, 178, 111);
