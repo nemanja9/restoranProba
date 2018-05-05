@@ -8,6 +8,8 @@ import artikal.Artikal;
 import restoran.gui.kontroler.GUIKontroler;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JButton;
 
@@ -32,6 +34,7 @@ public class HranaProzor extends JFrame {
 	 * Create the frame.
 	 */
 	public HranaProzor() {
+		
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 556, 539);
 		contentPane = new JPanel();
@@ -201,7 +204,7 @@ public class HranaProzor extends JFrame {
 
 		JLabel lblPastaSaPiletinom = new JLabel("<html> Pasta sa piletinom i pesto sosom<br/></html>");
 		lblPastaSaPiletinom.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPastaSaPiletinom.setBounds(275, 357, 131, 37);
+		lblPastaSaPiletinom.setBounds(271, 360, 131, 37);
 		contentPane.add(lblPastaSaPiletinom);
 
 		JLabel lblVrsteSira = new JLabel("4 vrste sira");
@@ -300,5 +303,12 @@ public class HranaProzor extends JFrame {
 		button_11.setIcon(new ImageIcon(HranaProzor.class.getResource("/hrana/Patsa 4 vrste sira.jpg")));
 		button_11.setBounds(418, 298, 108, 52);
 		contentPane.add(button_11);
+	}
+	private void ugasiAplikaciju() {
+		int opcija = JOptionPane.showConfirmDialog(contentPane, "Da li zaista zelite da izadjete iz apliacije",
+				"Izlazak", JOptionPane.YES_NO_OPTION);
+
+		if (opcija == JOptionPane.YES_OPTION)
+			System.exit(0);
 	}
 }
