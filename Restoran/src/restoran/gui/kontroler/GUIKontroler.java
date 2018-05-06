@@ -8,6 +8,7 @@ import restoran.gui.GlavniProzorLAZY;
 import restoran.gui.HranaProzor;
 import restoran.gui.KonobarovPrikaz;
 import restoran.gui.PicaProzor;
+import restoran.gui.PicaProzorHappyHour;
 import restoran.gui.PotvrdiPorudzbinuHraneDijalog;
 import restoran.gui.PotvrdiPorudzbinuPicaDijalog;
 import restoran.interfejs.Restoran;
@@ -38,6 +39,12 @@ public class GUIKontroler {
 
 	public static void prikaziPicaProzor() {
 		PicaProzor pp = new PicaProzor();
+		pp.setLocationRelativeTo(gp);
+		pp.setVisible(true);
+		
+	}
+	public static void prikaziPicaProzorHappyHour() {
+		PicaProzorHappyHour pp = new PicaProzorHappyHour();
 		pp.setLocationRelativeTo(gp);
 		pp.setVisible(true);
 		
@@ -75,6 +82,10 @@ public class GUIKontroler {
 		dij.setVisible(true);
 	}
 	public static void prikaziKonobarProzor(Artikal a) {
+		KonobarovPrikaz kp = new KonobarovPrikaz();
+		kp.setVisible(true);
+	}
+	public static void prikaziKonobarProzorPomoc() {
 		KonobarovPrikaz kp = new KonobarovPrikaz();
 		kp.setVisible(true);
 	}

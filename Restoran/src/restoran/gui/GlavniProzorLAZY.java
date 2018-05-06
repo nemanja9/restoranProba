@@ -133,6 +133,11 @@ public class GlavniProzorLAZY extends JFrame {
 			panel_3.add(txtrDobrodoliUQuick);
 			
 			JButton btnPozoviKonobara = new JButton("Pozovi konobara");
+			btnPozoviKonobara.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					GUIKontroler.prikaziKonobarProzorPomoc();
+				}
+			});
 			btnPozoviKonobara.setFont(new Font("BalloonExtra", Font.PLAIN, 11));
 			btnPozoviKonobara.setIcon(new ImageIcon(GlavniProzorLAZY.class.getResource("/javax/swing/plaf/metal/icons/Question.gif")));
 			btnPozoviKonobara.setBounds(398, 389, 164, 43);
@@ -220,7 +225,7 @@ public class GlavniProzorLAZY extends JFrame {
 		if (lblSpecijalitetDana == null) {
 			lblSpecijalitetDana = new JLabel("Specijalitet dana");
 			lblSpecijalitetDana.setFont(new Font("Tahoma", Font.BOLD, 20));
-			lblSpecijalitetDana.setBounds(22, 61, 192, 29);
+			lblSpecijalitetDana.setBounds(57, 61, 192, 29);
 		}
 		return lblSpecijalitetDana;
 	}
@@ -237,10 +242,11 @@ public class GlavniProzorLAZY extends JFrame {
 					Artikal a = new Artikal(640, "Pasta sa piletinom i pesto sosom",
 							"/hrana/Patsa sa piletinom i pestom.JPG", sastojci, "pa");
 					GUIKontroler.prikaziPotvrdiPorudzbinuHraneDijalog(a);
+					
 				}
 			});
 			getBtnSpecijalitet().setIcon(new ImageIcon(HranaProzor.class.getResource("/hrana/Patsa sa piletinom i pestom.jpg")));
-			getBtnSpecijalitet().setBounds(22, 131, 157, 144);
+			getBtnSpecijalitet().setBounds(57, 131, 157, 144);
 			//btnNewButton.setBounds(88, 72, 207, 76);
 		}
 		return btnNewButton;
@@ -248,7 +254,7 @@ public class GlavniProzorLAZY extends JFrame {
 	private JLabel getLblNewLabel() {
 		if (lblNewLabel == null) {
 			lblNewLabel = new JLabel("Pasta sa piletinom i pesto sosom");
-			lblNewLabel.setBounds(22, 295, 214, 14);
+			lblNewLabel.setBounds(57, 286, 214, 14);
 		}
 		return lblNewLabel;
 	}
@@ -256,7 +262,7 @@ public class GlavniProzorLAZY extends JFrame {
 		if (lblCenaDinara == null) {
 			lblCenaDinara = new JLabel("Cena: 640 dinara");
 			lblCenaDinara.setFont(new Font("Tahoma", Font.ITALIC, 11));
-			lblCenaDinara.setBounds(22, 309, 93, 14);
+			lblCenaDinara.setBounds(57, 300, 93, 14);
 		}
 		return lblCenaDinara;
 	}
@@ -264,28 +270,34 @@ public class GlavniProzorLAZY extends JFrame {
 		if (lblHappyHour == null) {
 			lblHappyHour = new JLabel("Happy hour");
 			lblHappyHour.setFont(new Font("Tahoma", Font.BOLD, 20));
-			lblHappyHour.setBounds(335, 58, 157, 34);
+			lblHappyHour.setBounds(347, 58, 157, 34);
 		}
 		return lblHappyHour;
 	}
 	private JButton getBtnNewButton_1() {
 		if (btnNewButton_1 == null) {
 			btnNewButton_1 = new JButton("New button");
-			btnNewButton_1.setBounds(314, 131, 157, 144);
+			btnNewButton_1.setIcon(new ImageIcon("C:\\Users\\Bojan\\Desktop\\coffe\\kafa1.jpg"));
+			btnNewButton_1.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					GUIKontroler.prikaziPicaProzorHappyHour();
+				}
+			});
+			btnNewButton_1.setBounds(347, 131, 157, 144);
 		}
 		return btnNewButton_1;
 	}
 	private JLabel getLblOdDo() {
 		if (lblOdDo == null) {
-			lblOdDo = new JLabel("Od 17:00 do 19:00 cene\r\n svih ");
-			lblOdDo.setBounds(314, 291, 178, 23);
+			lblOdDo = new JLabel("Od 10:00 do 11:00 cene\r\n svih ");
+			lblOdDo.setBounds(347, 282, 178, 23);
 		}
 		return lblOdDo;
 	}
 	private JLabel getLblVrstaPivaSniena() {
 		if (lblVrstaPivaSniena == null) {
 			lblVrstaPivaSniena = new JLabel("vrsta kafa sni\u017Eene za 10%");
-			lblVrstaPivaSniena.setBounds(314, 309, 157, 14);
+			lblVrstaPivaSniena.setBounds(347, 300, 157, 14);
 		}
 		return lblVrstaPivaSniena;
 	}
