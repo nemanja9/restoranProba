@@ -51,11 +51,18 @@ public class Artikal {
 	 * @param sastojcii
 	 * @param tipp
 	 */
-	public Artikal(double cenaa, String nazivv, String putanjaSlike, LinkedList<String> sastojcii, String tipp) {
-		naziv = nazivv;
-		cena = cenaa;
+	public Artikal(double cena, String naziv, String putanjaSlike, LinkedList<String> sastojci, String tip) {
+		this.naziv = naziv;
+		this.cena = cena;
 		image = new ImageIcon(getClass().getResource(putanjaSlike));
-		sastojci = sastojcii;
-		tip = tipp;
+		this.sastojci = sastojci;
+		this.tip = tip;
 	}
+	
+	public Artikal(double cena, String naziv, String tip) {
+		this.naziv = naziv;
+		this.cena = cena;
+		this.tip = tip;
+	}
+	
 }

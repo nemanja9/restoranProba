@@ -115,6 +115,7 @@ public class PotvrdiPorudzbinuHraneDijalog extends JDialog {
 					okButton.addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
 							GUIKontroler.poruci(a, izabraniSastojci);
+							
 							dispose();
 						}
 					});
