@@ -28,7 +28,7 @@ public class KonobarovPrikaz extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JButton btnSto;
+	public static JButton btnSto;
 	private JButton btnSto_1;
 	private JButton btnSto_2;
 	private JButton btnSto_3;

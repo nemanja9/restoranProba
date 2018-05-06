@@ -58,7 +58,13 @@ public class Artikal {
 		this.sastojci = sastojci;
 		this.tip = tip;
 	}
-	
+	/**
+	 * Konstruktor koji pravi novi Artikal za serijalizaciju
+	 * 
+	 * @param cena
+	 * @param naziv
+	 * @param tip
+	 */
 	public Artikal(double cena, String naziv, String tip) {
 		this.naziv = naziv;
 		this.cena = cena;

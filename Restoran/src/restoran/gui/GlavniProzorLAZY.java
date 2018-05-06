@@ -1,6 +1,7 @@
 package restoran.gui;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -146,6 +147,7 @@ public class GlavniProzorLAZY extends JFrame {
 			btnPozoviKonobara.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					GUIKontroler.prikaziKonobarProzorPomoc();
+					KonobarovPrikaz.btnSto.setBackground(Color.RED);
 				}
 			});
 			btnPozoviKonobara.setFont(new Font("BalloonExtra", Font.PLAIN, 11));
