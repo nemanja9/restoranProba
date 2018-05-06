@@ -16,6 +16,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 public class KonobarovPrikaz extends JFrame {
 
@@ -28,20 +31,16 @@ public class KonobarovPrikaz extends JFrame {
 	private JButton btnSto_1;
 	private JButton btnSto_2;
 	private JButton btnSto_3;
-	private JButton btnSto_4;
-	private JButton btnSto_5;
 	private JLabel lblUkupanRacun;
 	private JLabel label;
 	private JLabel label_1;
 	private JLabel label_2;
-	private JLabel label_3;
-	private JLabel label_4;
 	private JLabel lblX;
 	private JLabel label_5;
 	private JLabel label_6;
 	private JLabel label_7;
-	private JLabel label_8;
-	private JLabel label_9;
+	public static JTextArea textAreaSto;
+	private JScrollPane scrollPane;
 
 	/**
 	 * Launch the application.
@@ -74,26 +73,22 @@ public class KonobarovPrikaz extends JFrame {
 		contentPane.add(getBtnSto_1());
 		contentPane.add(getBtnSto_2());
 		contentPane.add(getBtnSto_3());
-		contentPane.add(getBtnSto_4());
-		contentPane.add(getBtnSto_5());
 		contentPane.add(getLblUkupanRacun());
 		contentPane.add(getLabel());
 		contentPane.add(getLabel_1());
 		contentPane.add(getLabel_2());
-		contentPane.add(getLabel_3());
-		contentPane.add(getLabel_4());
 		contentPane.add(getLblX());
 		contentPane.add(getLabel_5());
 		contentPane.add(getLabel_6());
 		contentPane.add(getLabel_7());
-		contentPane.add(getLabel_8());
-		contentPane.add(getLabel_9());
+		contentPane.add(getScrollPane());
 	}
 	private JButton getBtnSto() {
 		if (btnSto == null) {
 			btnSto = new JButton("Sto 1");
 			btnSto.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					KonobarovPrikaz.textAreaSto.append(GlavniProzorLAZY.textArea.getText());
 				}
 			});
 			btnSto.setBounds(12, 26, 178, 111);
@@ -120,20 +115,6 @@ public class KonobarovPrikaz extends JFrame {
 			btnSto_3.setBounds(332, 192, 178, 111);
 		}
 		return btnSto_3;
-	}
-	private JButton getBtnSto_4() {
-		if (btnSto_4 == null) {
-			btnSto_4 = new JButton("Sto 5");
-			btnSto_4.setBounds(12, 361, 178, 111);
-		}
-		return btnSto_4;
-	}
-	private JButton getBtnSto_5() {
-		if (btnSto_5 == null) {
-			btnSto_5 = new JButton("Sto 6");
-			btnSto_5.setBounds(332, 361, 178, 111);
-		}
-		return btnSto_5;
 	}
 	private JLabel getLblUkupanRacun() {
 		if (lblUkupanRacun == null) {
@@ -162,20 +143,6 @@ public class KonobarovPrikaz extends JFrame {
 			label_2.setBounds(22, 316, 130, 16);
 		}
 		return label_2;
-	}
-	private JLabel getLabel_3() {
-		if (label_3 == null) {
-			label_3 = new JLabel("Ukupan racun:");
-			label_3.setBounds(342, 485, 130, 16);
-		}
-		return label_3;
-	}
-	private JLabel getLabel_4() {
-		if (label_4 == null) {
-			label_4 = new JLabel("Ukupan racun:");
-			label_4.setBounds(22, 485, 130, 16);
-		}
-		return label_4;
 	}
 	private JLabel getLblX() {
 		if (lblX == null) {
@@ -213,23 +180,18 @@ public class KonobarovPrikaz extends JFrame {
 		}
 		return label_7;
 	}
-	private JLabel getLabel_8() {
-		if (label_8 == null) {
-			label_8 = new JLabel("X");
-			label_8.setHorizontalAlignment(SwingConstants.CENTER);
-			label_8.setFont(new Font("Tahoma", Font.BOLD, 15));
-			label_8.setBounds(454, 474, 56, 33);
+	private JTextArea getTextAreaSto() {
+		if (textAreaSto == null) {
+			textAreaSto = new JTextArea();
 		}
-		return label_8;
+		return textAreaSto;
 	}
-	private JLabel getLabel_9() {
-		if (label_9 == null) {
-			label_9 = new JLabel("X");
-			label_9.setHorizontalAlignment(SwingConstants.CENTER);
-			label_9.setFont(new Font("Tahoma", Font.BOLD, 15));
-			label_9.setBounds(134, 474, 56, 33);
+	private JScrollPane getScrollPane() {
+		if (scrollPane == null) {
+			scrollPane = new JScrollPane();
+			scrollPane.setBounds(12, 375, 476, 127);
+			scrollPane.setViewportView(getTextAreaSto());
 		}
-		return label_9;
+		return scrollPane;
 	}
-	
 }

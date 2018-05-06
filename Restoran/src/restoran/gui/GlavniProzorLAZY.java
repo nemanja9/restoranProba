@@ -42,7 +42,7 @@ public class GlavniProzorLAZY extends JFrame {
 	private JButton button;
 	private JButton button_1;
 	private JLabel lblPoruceno;
-	public JTextArea textArea;
+	public static JTextArea textArea;
 	private JScrollPane scrollPane;
 	private JButton btnRacun;
 	private JLabel lblPomo;
@@ -54,6 +54,9 @@ public class GlavniProzorLAZY extends JFrame {
 	private JButton btnNewButton_1;
 	private JLabel lblOdDo;
 	private JLabel lblVrstaPivaSniena;
+	private JLabel lblHrana;
+	private JLabel lblPice;
+	private JButton btnPoruci;
 
 	
 
@@ -61,6 +64,8 @@ public class GlavniProzorLAZY extends JFrame {
 	 * Create the frame.
 	 */
 	public GlavniProzorLAZY() {
+		setTitle("Restoran");
+		setResizable(false);
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {
@@ -90,12 +95,12 @@ public class GlavniProzorLAZY extends JFrame {
 		if (panel == null) {
 			panel = new JPanel();
 			panel.setLayout(null);
+			panel.add(getBtnNewButton_1());
 			panel.add(getLblSpecijalitetDana());
 			panel.add(getBtnSpecijalitet());
 			panel.add(getLblNewLabel());
 			panel.add(getLblCenaDinara());
 			panel.add(getLblHappyHour());
-			panel.add(getBtnNewButton_1());
 			panel.add(getLblOdDo());
 			panel.add(getLblVrstaPivaSniena());
 		}
@@ -107,6 +112,8 @@ public class GlavniProzorLAZY extends JFrame {
 			panel_1.setLayout(null);
 			panel_1.add(getButton());
 			panel_1.add(getButton_1());
+			panel_1.add(getLblHrana());
+			panel_1.add(getLblPice());
 		}
 		return panel_1;
 	}
@@ -117,6 +124,7 @@ public class GlavniProzorLAZY extends JFrame {
 			panel_2.add(getLblPoruceno());
 			panel_2.add(getScrollPane());
 			panel_2.add(getButton_2_1());
+			panel_2.add(getBtnPoruci());
 		}
 		return panel_2;
 	}
@@ -148,25 +156,28 @@ public class GlavniProzorLAZY extends JFrame {
 	private JButton getButton() {
 		if (button == null) {
 			button = new JButton("Hrana");
+			button.setIcon(new ImageIcon(GlavniProzorLAZY.class.getResource("/hrana/hrana.jpg")));
 			button.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					GUIKontroler.prikaziHranaProzor();
 					
 				}
 			});
-			button.setBounds(130, 42, 247, 119);
+			button.setBounds(85, 80, 408, 138);
 		}
 		return button;
 	}
 	private JButton getButton_1() {
 		if (button_1 == null) {
 			button_1 = new JButton("Pice");
+			button_1.setIcon(new ImageIcon(GlavniProzorLAZY.class.getResource("/pica/pice.jpg")));
+			button_1.setIconTextGap(1);
 			button_1.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					GUIKontroler.prikaziPicaProzor();
 				}
 			});
-			button_1.setBounds(130, 224, 247, 119);
+			button_1.setBounds(85, 291, 408, 138);
 		}
 		return button_1;
 	}
@@ -202,7 +213,7 @@ public class GlavniProzorLAZY extends JFrame {
 					GUIKontroler.racunTextArea();
 				}
 			});
-			btnRacun.setBounds(403, 152, 105, 58);
+			btnRacun.setBounds(403, 194, 105, 58);
 		}
 		return btnRacun;
 	}
@@ -246,7 +257,7 @@ public class GlavniProzorLAZY extends JFrame {
 				}
 			});
 			getBtnSpecijalitet().setIcon(new ImageIcon(HranaProzor.class.getResource("/hrana/Patsa sa piletinom i pestom.jpg")));
-			getBtnSpecijalitet().setBounds(57, 131, 157, 144);
+			getBtnSpecijalitet().setBounds(57, 131, 143, 144);
 			//btnNewButton.setBounds(88, 72, 207, 76);
 		}
 		return btnNewButton;
@@ -277,13 +288,13 @@ public class GlavniProzorLAZY extends JFrame {
 	private JButton getBtnNewButton_1() {
 		if (btnNewButton_1 == null) {
 			btnNewButton_1 = new JButton("New button");
-			btnNewButton_1.setIcon(new ImageIcon("C:\\Users\\Bojan\\Desktop\\coffe\\kafa1.jpg"));
+			btnNewButton_1.setIcon(new ImageIcon(GlavniProzorLAZY.class.getResource("/pica/kafa.jpg")));
 			btnNewButton_1.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					GUIKontroler.prikaziPicaProzorHappyHour();
 				}
 			});
-			btnNewButton_1.setBounds(347, 131, 157, 144);
+			btnNewButton_1.setBounds(347, 131, 143, 144);
 		}
 		return btnNewButton_1;
 	}
@@ -300,5 +311,34 @@ public class GlavniProzorLAZY extends JFrame {
 			lblVrstaPivaSniena.setBounds(347, 300, 157, 14);
 		}
 		return lblVrstaPivaSniena;
+	}
+	private JLabel getLblHrana() {
+		if (lblHrana == null) {
+			lblHrana = new JLabel("Hrana");
+			lblHrana.setFont(new Font("Tahoma", Font.BOLD, 16));
+			lblHrana.setBounds(250, 44, 63, 35);
+		}
+		return lblHrana;
+	}
+	private JLabel getLblPice() {
+		if (lblPice == null) {
+			lblPice = new JLabel("Pice");
+			lblPice.setFont(new Font("Tahoma", Font.BOLD, 16));
+			lblPice.setBounds(250, 257, 123, 35);
+		}
+		return lblPice;
+	}
+	private JButton getBtnPoruci() {
+		if (btnPoruci == null) {
+			btnPoruci = new JButton("PORUCI");
+			btnPoruci.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					GUIKontroler.prikaziKonobarProzor(null);
+					
+				}
+			});
+			btnPoruci.setBounds(403, 106, 105, 58);
+		}
+		return btnPoruci;
 	}
 }

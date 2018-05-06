@@ -67,14 +67,14 @@ public class GUIKontroler {
 		a.sastojci = izabraniSastojci;
 		restoran.poruciArtikal(a);
 		ispis(a);
-		prikaziKonobarProzor(a);
+		
 	
 	}
 	
 	public static void ispis(Artikal a) {
 		
 			gp.textArea.append(a.naziv + "............." +a.cena + newline);
-		
+			
 	}
 	public static void prikaziPotvrdiPorudzbinuPicaDijalog(Artikal a) {
 		PotvrdiPorudzbinuPicaDijalog dij = new PotvrdiPorudzbinuPicaDijalog(a);
