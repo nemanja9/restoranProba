@@ -27,7 +27,12 @@ public class ArtikalTest {
 	}
 
 	@Test
-	public void testArtikal() {
+	public void testArtikalDoubleStringStringLinkedListOfStringString() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testArtikalDoubleStringString() {
 		fail("Not yet implemented");
 	}
 
