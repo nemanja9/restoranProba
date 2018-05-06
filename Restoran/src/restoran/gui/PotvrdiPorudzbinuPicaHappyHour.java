@@ -18,6 +18,7 @@ import javax.swing.JCheckBox;
 import java.awt.event.ActionListener;
 import java.util.LinkedList;
 import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
 
 public class PotvrdiPorudzbinuPicaHappyHour extends JDialog {
 
@@ -32,6 +33,8 @@ public class PotvrdiPorudzbinuPicaHappyHour extends JDialog {
 	 * Create the dialog.
 	 */
 	public PotvrdiPorudzbinuPicaHappyHour(Artikal a) {
+		setTitle("Potvrda happy hour");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(PotvrdiPorudzbinuPicaHappyHour.class.getResource("/logo/logo.jpeg")));
 		
 		setBounds(100, 100, 611, 340);
 		getContentPane().setLayout(new BorderLayout());

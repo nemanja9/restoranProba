@@ -19,6 +19,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import java.awt.Toolkit;
 
 public class KonobarovPrikaz extends JFrame {
 
@@ -62,6 +63,8 @@ public class KonobarovPrikaz extends JFrame {
 	 * Create the frame.
 	 */
 	public KonobarovPrikaz() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(KonobarovPrikaz.class.getResource("/logo/logo.jpeg")));
+		setTitle("Konobar");
 		
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 652, 552);

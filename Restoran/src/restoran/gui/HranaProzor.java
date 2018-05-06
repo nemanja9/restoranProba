@@ -21,6 +21,7 @@ import java.util.LinkedList;
 import java.awt.event.ActionEvent;
 
 import javax.swing.ImageIcon;
+import java.awt.Toolkit;
 
 public class HranaProzor extends JFrame {
 
@@ -34,6 +35,8 @@ public class HranaProzor extends JFrame {
 	 * Create the frame.
 	 */
 	public HranaProzor() {
+		setTitle("Hrana");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(HranaProzor.class.getResource("/logo/logo.jpeg")));
 		
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 556, 539);

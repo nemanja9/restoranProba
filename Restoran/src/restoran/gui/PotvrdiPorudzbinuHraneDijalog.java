@@ -17,6 +17,7 @@ import javax.swing.JCheckBox;
 import java.awt.event.ActionListener;
 import java.util.LinkedList;
 import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
 
 public class PotvrdiPorudzbinuHraneDijalog extends JDialog {
 
@@ -31,6 +32,8 @@ public class PotvrdiPorudzbinuHraneDijalog extends JDialog {
 	 * Create the dialog.
 	 */
 	public PotvrdiPorudzbinuHraneDijalog(Artikal a) {
+		setTitle("Potvrda hrane");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(PotvrdiPorudzbinuHraneDijalog.class.getResource("/logo/logo.jpeg")));
 		setBounds(100, 100, 611, 340);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));

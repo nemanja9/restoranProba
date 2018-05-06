@@ -26,6 +26,7 @@ import javax.swing.JScrollPane;
 import restoran.gui.kontroler.GUIKontroler;
 import javax.swing.SwingConstants;
 import javax.swing.ImageIcon;
+import java.awt.Toolkit;
 
 public class GlavniProzorLAZY extends JFrame {
 
@@ -64,6 +65,7 @@ public class GlavniProzorLAZY extends JFrame {
 	 * Create the frame.
 	 */
 	public GlavniProzorLAZY() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(GlavniProzorLAZY.class.getResource("/logo/logo.jpeg")));
 		setTitle("Restoran");
 		setResizable(false);
 		addWindowListener(new WindowAdapter() {

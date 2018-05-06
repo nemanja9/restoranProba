@@ -17,6 +17,7 @@ import javax.swing.JCheckBox;
 import java.awt.event.ActionListener;
 import java.util.LinkedList;
 import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
 
 public class PotvrdiPorudzbinuPicaDijalog extends JDialog {
 
@@ -31,6 +32,8 @@ public class PotvrdiPorudzbinuPicaDijalog extends JDialog {
 	 * Create the dialog.
 	 */
 	public PotvrdiPorudzbinuPicaDijalog(Artikal a) {
+		setTitle("Potvrda pica");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(PotvrdiPorudzbinuPicaDijalog.class.getResource("/logo/logo.jpeg")));
 		setBounds(100, 100, 611, 340);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));

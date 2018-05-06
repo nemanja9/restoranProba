@@ -19,6 +19,7 @@ import java.util.LinkedList;
 import java.awt.event.ActionEvent;
 
 import javax.swing.ImageIcon;
+import java.awt.Toolkit;
 
 public class PicaProzor extends JFrame {
 
@@ -32,6 +33,8 @@ public class PicaProzor extends JFrame {
 	 * Create the frame.
 	 */
 	public PicaProzor() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(PicaProzor.class.getResource("/logo/logo.jpeg")));
+		setTitle("Pica");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 593, 713);
 		contentPane = new JPanel();

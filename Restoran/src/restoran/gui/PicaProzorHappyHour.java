@@ -17,6 +17,7 @@ import javax.swing.border.EmptyBorder;
 
 import artikal.Artikal;
 import restoran.gui.kontroler.GUIKontroler;
+import java.awt.Toolkit;
 
 public class PicaProzorHappyHour extends JFrame {
 
@@ -45,6 +46,8 @@ public class PicaProzorHappyHour extends JFrame {
 	 * Create the frame.
 	 */
 	public PicaProzorHappyHour() {
+		setTitle("Happy Hour");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(PicaProzorHappyHour.class.getResource("/logo/logo.jpeg")));
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 566, 331);
 		contentPane = new JPanel();
