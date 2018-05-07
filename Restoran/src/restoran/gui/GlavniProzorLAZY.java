@@ -138,6 +138,7 @@ public class GlavniProzorLAZY extends JFrame {
 			panel_3.add(getLblPomo());
 			
 			JTextArea txtrDobrodoliUQuick = new JTextArea();
+			txtrDobrodoliUQuick.setEditable(false);
 			txtrDobrodoliUQuick.setFont(new Font("Arial Black", Font.PLAIN, 15));
 			txtrDobrodoliUQuick.setText("Dobrodo\u0161li u Quick Serve! \r\nOva aplikacija Vam poma\u017Ee\r\npri odabiru hrane i pi\u0107a\r\ni omogu\u0107ava brzo i jednostavno poru\u010Divanje.\r\nSamo izaberite \u0161ta \u017Eelite, izmenite sastojke ukoliko\r\n\u017Eelite i kliknite poru\u010Di. Nakon \u0161to zavr\u0161ite imate\r\nodmah uvid u Va\u0161 ra\u010Dun i jednim klikom mo\u017Eete\r\npozvati konobara da platite. Takodje u svakom\r\ntrenutku mo\u017Eete pozvati konobara ako Vam je\r\npotrebna dodatna pomo\u0107, klikom na dugme\r\n \"pozovi konobara\".\r\nHvala Vam na poverenju i prijatno!\r\n\r\n");
 			txtrDobrodoliUQuick.setBounds(31, 70, 428, 297);

@@ -104,7 +104,7 @@ public class KonobarovPrikaz extends JFrame {
 	private JLabel getLblUkupanRacun() {
 		if (lblUkupanRacun == null) {
 			lblUkupanRacun = new JLabel("Ukupan racun:");
-			lblUkupanRacun.setBounds(22, 146, 78, 16);
+			lblUkupanRacun.setBounds(22, 146, 107, 16);
 		}
 		return lblUkupanRacun;
 	}
