@@ -148,6 +148,7 @@ public class GlavniProzorLAZY extends JFrame {
 				public void actionPerformed(ActionEvent e) {
 					GUIKontroler.prikaziKonobarProzorPomoc();
 					KonobarovPrikaz.btnSto.setBackground(Color.RED);
+					KonobarovPrikaz.textAreaSto.setText("Potrebni ste stolu broj 1!");
 				}
 			});
 			btnPozoviKonobara.setFont(new Font("BalloonExtra", Font.PLAIN, 11));
