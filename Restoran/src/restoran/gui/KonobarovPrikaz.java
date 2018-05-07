@@ -40,21 +40,7 @@ public class KonobarovPrikaz extends JFrame {
 	private JScrollPane scrollPane;
 	public static JLabel labelRacun;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					KonobarovPrikaz frame = new KonobarovPrikaz();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+
 
 	/**
 	 * Create the frame.
