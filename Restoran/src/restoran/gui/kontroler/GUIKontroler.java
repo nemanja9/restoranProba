@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 import java.util.LinkedList;
 
 import com.google.gson.Gson;
@@ -94,6 +95,7 @@ public class GUIKontroler {
 	
 		try {
 			PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter("data/history.json", true)));
+			writer.println(new Date());
 			writer.println(porudz);
 			writer.close();
 		} catch (IOException e) {

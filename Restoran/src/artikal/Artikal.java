@@ -1,6 +1,7 @@
 package artikal;
 
 import java.awt.Image;
+import java.util.Date;
 import java.util.LinkedList;
 
 import javax.swing.Icon;
@@ -69,6 +70,7 @@ public class Artikal {
 		this.naziv = naziv;
 		this.cena = cena;
 		this.tip = tip;
+		
 	}
 	
 }

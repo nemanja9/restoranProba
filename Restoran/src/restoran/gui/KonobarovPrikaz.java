@@ -36,12 +36,9 @@ public class KonobarovPrikaz extends JFrame {
 	private JLabel label;
 	private JLabel label_1;
 	private JLabel label_2;
-	private JLabel lblX;
-	private JLabel label_5;
-	private JLabel label_6;
-	private JLabel label_7;
 	public static JTextArea textAreaSto;
 	private JScrollPane scrollPane;
+	public static JLabel labelRacun;
 
 	/**
 	 * Launch the application.
@@ -80,18 +77,17 @@ public class KonobarovPrikaz extends JFrame {
 		contentPane.add(getLabel());
 		contentPane.add(getLabel_1());
 		contentPane.add(getLabel_2());
-		contentPane.add(getLblX());
-		contentPane.add(getLabel_5());
-		contentPane.add(getLabel_6());
-		contentPane.add(getLabel_7());
 		contentPane.add(getScrollPane());
+		contentPane.add(getLabelRacun());
 	}
 	private JButton getBtnSto() {
 		if (btnSto == null) {
 			btnSto = new JButton("Sto 1");
 			btnSto.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					KonobarovPrikaz.textAreaSto.append(GlavniProzorLAZY.textArea.getText());
+					
+					KonobarovPrikaz.textAreaSto.append(GlavniProzorLAZY.porudzbina);
+					
 				}
 			});
 			btnSto.setBounds(12, 26, 178, 111);
@@ -122,7 +118,7 @@ public class KonobarovPrikaz extends JFrame {
 	private JLabel getLblUkupanRacun() {
 		if (lblUkupanRacun == null) {
 			lblUkupanRacun = new JLabel("Ukupan racun:");
-			lblUkupanRacun.setBounds(22, 146, 130, 16);
+			lblUkupanRacun.setBounds(22, 146, 78, 16);
 		}
 		return lblUkupanRacun;
 	}
@@ -147,42 +143,6 @@ public class KonobarovPrikaz extends JFrame {
 		}
 		return label_2;
 	}
-	private JLabel getLblX() {
-		if (lblX == null) {
-			lblX = new JLabel("X");
-			lblX.setHorizontalAlignment(SwingConstants.CENTER);
-			lblX.setFont(new Font("Tahoma", Font.BOLD, 15));
-			lblX.setBounds(134, 137, 56, 33);
-		}
-		return lblX;
-	}
-	private JLabel getLabel_5() {
-		if (label_5 == null) {
-			label_5 = new JLabel("X");
-			label_5.setHorizontalAlignment(SwingConstants.CENTER);
-			label_5.setFont(new Font("Tahoma", Font.BOLD, 15));
-			label_5.setBounds(454, 137, 56, 33);
-		}
-		return label_5;
-	}
-	private JLabel getLabel_6() {
-		if (label_6 == null) {
-			label_6 = new JLabel("X");
-			label_6.setHorizontalAlignment(SwingConstants.CENTER);
-			label_6.setFont(new Font("Tahoma", Font.BOLD, 15));
-			label_6.setBounds(454, 304, 56, 33);
-		}
-		return label_6;
-	}
-	private JLabel getLabel_7() {
-		if (label_7 == null) {
-			label_7 = new JLabel("X");
-			label_7.setHorizontalAlignment(SwingConstants.CENTER);
-			label_7.setFont(new Font("Tahoma", Font.BOLD, 15));
-			label_7.setBounds(134, 304, 56, 33);
-		}
-		return label_7;
-	}
 	private JTextArea getTextAreaSto() {
 		if (textAreaSto == null) {
 			textAreaSto = new JTextArea();
@@ -196,5 +156,12 @@ public class KonobarovPrikaz extends JFrame {
 			scrollPane.setViewportView(getTextAreaSto());
 		}
 		return scrollPane;
+	}
+	private JLabel getLabelRacun() {
+		if (labelRacun == null) {
+			labelRacun = new JLabel("");
+			labelRacun.setBounds(126, 148, 64, 16);
+		}
+		return labelRacun;
 	}
 }

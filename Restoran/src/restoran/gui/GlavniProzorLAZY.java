@@ -59,8 +59,8 @@ public class GlavniProzorLAZY extends JFrame {
 	private JLabel lblHrana;
 	private JLabel lblPice;
 	private JButton btnPoruci;
-
 	
+	public static String porudzbina;
 
 	/**
 	 * Create the frame.
@@ -214,7 +214,16 @@ public class GlavniProzorLAZY extends JFrame {
 			btnRacun = new JButton("RACUN");
 			btnRacun.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
+					
 					GUIKontroler.racunTextArea();
+					GUIKontroler.prikaziKonobarProzor(null);
+					KonobarovPrikaz.btnSto.setBackground(Color.RED);
+					if(!KonobarovPrikaz.textAreaSto.getText().isEmpty()) {
+						KonobarovPrikaz.textAreaSto.setText(null);
+					}
+					textArea.setText(null);
+					KonobarovPrikaz.textAreaSto.setText("Racun za sto 1, iznos: "+GUIKontroler.restoran.racunaUkupanIznosRacuna());
+					KonobarovPrikaz.labelRacun.setText(GUIKontroler.restoran.racunaUkupanIznosRacuna()+"");
 				}
 			});
 			btnRacun.setBounds(403, 194, 105, 58);
@@ -338,6 +347,13 @@ public class GlavniProzorLAZY extends JFrame {
 			btnPoruci.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					GUIKontroler.prikaziKonobarProzor(null);
+					KonobarovPrikaz.btnSto.setBackground(Color.RED);
+					porudzbina = textArea.getText();
+					if(!textArea.getText().isEmpty()) {
+						textArea.setText(null);
+		
+					}
+					KonobarovPrikaz.textAreaSto.setText(null);
 					
 				}
 			});
