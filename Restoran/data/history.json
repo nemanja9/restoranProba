@@ -258,3 +258,33 @@ Mon May 07 17:01:23 CEST 2018
   "cena": 640.0,
   "tip": "pa"
 }
+Mon May 07 21:53:46 CEST 2018
+{
+  "naziv": "Mix jagoda, breskva, banana",
+  "cena": 370.0,
+  "tip": "sok1"
+}
+Mon May 07 21:53:55 CEST 2018
+{
+  "naziv": "Ice coffee",
+  "cena": 300.0,
+  "tip": "kaf"
+}
+Mon May 07 21:54:12 CEST 2018
+{
+  "naziv": "Pasta 4 vrste sira",
+  "cena": 640.0,
+  "tip": "pa"
+}
+Mon May 07 21:54:20 CEST 2018
+{
+  "naziv": "Piletina u sosu od jogurta i senfa",
+  "cena": 870.0,
+  "tip": "gl"
+}
+Mon May 07 21:55:08 CEST 2018
+{
+  "naziv": "Espresso",
+  "cena": 216.0,
+  "tip": "kaf"
+}
